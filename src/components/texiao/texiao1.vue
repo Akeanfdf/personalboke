@@ -1,0 +1,288 @@
+<script setup >
+import { motion } from 'motion-v'
+
+const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i) => {
+        const delay = i * 0.5
+        return {
+            pathLength: 1,
+            opacity: 1,
+            transition: {
+                pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+                opacity: { delay, duration: 0.01 },
+            },
+        }
+    },
+}
+
+/**
+ * ==============   Styles   ================
+ */
+
+const image = {
+    maxWidth: "80vw",
+}
+
+const shape = {
+    strokeWidth: 10,
+    strokeLinecap: "round",
+    fill: "transparent",
+}
+</script>
+
+<template>
+    <motion.svg
+            width="800"
+            height="200"
+            viewBox="0 0 3600 200"
+            initial="hidden"
+            animate="visible"
+            :style="image"
+    >
+        <motion.circle
+                class="circle-path"
+                cx="100"
+                cy="100"
+                r="80"
+                stroke="#ff0088"
+                :variants="draw"
+                :custom="1"
+                :style="shape"
+        />
+        <motion.line
+                x1="220"
+                y1="30"
+                x2="360"
+                y2="170"
+                stroke="#4ff0b7"
+                :variants="draw"
+                :custom="2"
+                :style="shape"
+        />
+        <motion.line
+                x1="220"
+                y1="170"
+                x2="360"
+                y2="30"
+                stroke="#4ff0b7"
+                :variants="draw"
+                :custom="2.5"
+                :style="shape"
+        />
+        <motion.rect
+                width="140"
+                height="140"
+                x="410"
+                y="30"
+                rx="20"
+                stroke="#0d63f8"
+                :variants="draw"
+                :custom="3"
+                :style="shape"
+        />
+        <motion.circle
+                cx="700"
+                cy="100"
+                r="80"
+                stroke="#0d63f8"
+                :variants="draw"
+                :custom="4"
+                :style="shape"
+        />
+        <motion.line
+            x1="820"
+            y1="30"
+            x2="960"
+            y2="170"
+                stroke="#ff0088"
+                :custom="4.5"
+                :variants="draw"
+                :style="shape"
+        />
+        <motion.line
+            x1="820"
+            y1="170"
+            x2="960"
+            y2="30"
+                stroke="#ff0088"
+                :custom="6"
+                :variants="draw"
+                :style="shape"
+        />
+        <motion.rect
+                width="140"
+                height="140"
+                x="1010"
+                y="30"
+                rx="20"
+                stroke="#4ff0b7"
+                :custom="6.5"
+                :variants="draw"
+                :style="shape"
+        />
+        <motion.circle
+                cx="1300"
+                cy="100"
+                r="80"
+                stroke="#4ff0b7"
+                :variants="draw"
+                :custom="7"
+                :style="shape"
+        />
+        <motion.line
+            x1="1420"
+            y1="30"
+            x2="1560"
+            y2="170"
+                stroke="#0d63f8"
+                :variants="draw"
+                :custom="8"
+                :style="shape"
+        />
+        <motion.line
+            x1="1420"
+            y1="170"
+            x2="1560"
+            y2="30"
+                stroke="#0d63f8"
+                :variants="draw"
+                :custom="6"
+                :style="shape"
+        />
+        <motion.rect
+                width="140"
+                height="140"
+                x="1610"
+                y="30"
+                rx="20"
+                stroke="#ff0088"
+                :variants="draw"
+                :custom="7.5"
+                :style="shape"
+        />
+        <motion.circle
+            class="circle-path"
+            cx="1900"
+            cy="100"
+            r="80"
+            stroke="#ff0088"
+            :variants="draw"
+            :custom="7.5"
+            :style="shape"
+        />
+        <motion.line
+            x1="2020"
+            y1="30"
+            x2="2160"
+            y2="170"
+            stroke="#4ff0b7"
+            :variants="draw"
+            :custom="8"
+            :style="shape"
+        />
+        <motion.line
+            x1="2020"
+            y1="170"
+            x2="2160"
+            y2="30"
+            stroke="#4ff0b7"
+            :variants="draw"
+            :custom="7.5"
+            :style="shape"
+        />
+        <motion.rect
+            width="140"
+            height="140"
+            x="2210"
+            y="30"
+            rx="20"
+            stroke="#0d63f8"
+            :variants="draw"
+            :custom="7"
+            :style="shape"
+        />
+        <motion.circle
+            class="circle-path"
+            cx="2500"
+            cy="100"
+            r="80"
+            stroke="#ff0088"
+            :variants="draw"
+            :custom="6.5"
+            :style="shape"
+        />
+        <motion.line
+            x1="2620"
+            y1="30"
+            x2="2760"
+            y2="170"
+            stroke="#4ff0b7"
+            :variants="draw"
+            :custom="6"
+            :style="shape"
+        />
+        <motion.line
+            x1="2620"
+            y1="170"
+            x2="2760"
+            y2="30"
+            stroke="#4ff0b7"
+            :variants="draw"
+            :custom="5.5"
+            :style="shape"
+        />
+        <motion.rect
+            width="140"
+            height="140"
+            x="2810"
+            y="30"
+            rx="20"
+            stroke="#0d63f8"
+            :variants="draw"
+            :custom="5"
+            :style="shape"
+        />
+        <motion.circle
+            class="circle-path"
+            cx="3100"
+            cy="100"
+            r="80"
+            stroke="#ff0088"
+            :variants="draw"
+            :custom="4"
+            :style="shape"
+        />
+        <motion.line
+            x1="3220"
+            y1="30"
+            x2="3360"
+            y2="170"
+            stroke="#4ff0b7"
+            :variants="draw"
+            :custom="3"
+            :style="shape"
+        />
+        <motion.line
+            x1="3220"
+            y1="170"
+            x2="3360"
+            y2="30"
+            stroke="#4ff0b7"
+            :variants="draw"
+            :custom="2.5"
+            :style="shape"
+        />
+        <motion.rect
+            width="140"
+            height="140"
+            x="3410"
+            y="30"
+            rx="20"
+            stroke="#0d63f8"
+            :variants="draw"
+            :custom="1"
+            :style="shape"
+        />
+    </motion.svg>
+</template>
